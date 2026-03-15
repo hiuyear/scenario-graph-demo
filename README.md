@@ -14,15 +14,7 @@ Each quantity in the model is represented as a **node in a graph**.
 Some nodes are **inputs** (for example oil supply), while others are **computed from upstream nodes**.
 
 Example structure:
-oil_supply
-↓
-fuel_produced
-↓
-energy_output
-↓
-emissions
-↓
-carbon_tax
+oil_supply -> fuel_produced -> energy_output -> emissions -> carbon_tax
 
 When an upstream value changes, the graph automatically recomputes all dependent nodes.
 
